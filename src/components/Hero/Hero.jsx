@@ -1,3 +1,4 @@
+import { scrollTo } from 'services/scrollTo';
 import { Button } from 'components/Button/Button';
 import { MainTitle } from 'components/MainTitle/MainTitle';
 import { Text } from 'components/Text/Text';
@@ -13,7 +14,9 @@ export const Hero = () => {
         mind. They should also be excited to learn, as the world of Front-End
         Development keeps evolving.
       </Text>
-      <Button type='button'>Sign up</Button>
+      <Button type="button" onClick={() => scrollTo('postSection')}>
+        Sign up
+      </Button>
     </>
   );
 };

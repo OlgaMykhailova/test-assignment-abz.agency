@@ -3,7 +3,7 @@ import { SignupForm } from 'components/SignupForm/SignupForm';
 
 export const PostSection = ({ setUsers, setNextUrl, setIsLoading }) => {
   return (
-    <section>
+    <section id="postSection">
       <SectionTitle>Working with POST request</SectionTitle>
       <SignupForm
         setUsers={setUsers}
