@@ -1,12 +1,13 @@
 import { Formik, Form } from 'formik';
+import { addUser, getUsers } from 'services/api';
+import { loadUsers } from 'services/loadUsers';
 import { Button } from 'components/Button/Button';
 import { signupSchema } from 'schemas/signupValidationSchema';
-import { addUser, getUsers } from 'services/api';
 import { RadioGroup } from 'components/RadioGroup/RadioGroup';
 import { TextInput } from 'components/TextInput/TextInput';
 import { FileInput } from 'components/FileInput/FileInput';
 
-export const SignupForm = () => {
+export const SignupForm = ({ setUsers, setNextUrl, setIsLoading }) => {
   const initialValues = {
     name: '',
     email: '',
@@ -29,7 +30,7 @@ export const SignupForm = () => {
       const response = await addUser(newUser);
       console.log(response);
       resetForm();
-      await getUsers();
+      await loadUsers(setIsLoading, setUsers, setNextUrl, getUsers);
     } catch (error) {
       console.log(error);
     }
