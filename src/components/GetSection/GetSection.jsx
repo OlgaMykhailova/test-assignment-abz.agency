@@ -47,7 +47,6 @@ export const GetSection = () => {
           'Sorry, there are no users for display. Please try again later.'
         );
       }
-      console.log(responseData.users);
       setUsers(users => [...users, ...responseData.users]);
       setNextUrl(responseData.links.next_url);
       setIsLoading(false);
@@ -58,7 +57,7 @@ export const GetSection = () => {
   };
 
   return (
-    <>
+    <section>
       <SectionTitle>Working with GET request</SectionTitle>
       {users ? (
         <UsersList users={users} />
@@ -72,6 +71,6 @@ export const GetSection = () => {
           Show More
         </Button>
       )}
-    </>
+    </section>
   );
 };
