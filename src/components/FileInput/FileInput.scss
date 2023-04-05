@@ -1,0 +1,49 @@
+@import 'styles/shared.scss';
+
+.fileinput {
+  display: none;
+}
+.fileinput__label {
+  position: relative;
+  cursor: pointer;
+}
+.fileinput__field {
+  width: 328px;
+  height: 54px;
+  padding: 14px 16px 14px 99px;
+  color: var(--primary-text-color);
+  background-color: var(--main-background-color);
+  font-size: var(--main-font-size);
+  line-height: var(--main-lineheight);
+  border: 1px solid var(--border-color);
+  border-radius: 4px;
+}
+.fileinput__button {
+  position: absolute;
+  top: 0;
+  left: 0;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 83px;
+  height: 54px;
+  border: 1px solid var(--primary-text-color);
+  border-radius: 4px 0px 0px 4px;
+}
+
+.fileinput__error {
+  display: none;
+  position: absolute;
+  top: 54px;
+  left: 14px;
+  color: var(--error-color);
+  font-size: 12px;
+}
+
+.fileinput__error-visible {
+   display: block;
+}
+
+.fileinput__field-error {
+  border: 2px solid var(--error-color);
+}

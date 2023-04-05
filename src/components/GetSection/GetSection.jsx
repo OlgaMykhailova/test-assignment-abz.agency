@@ -1,9 +1,12 @@
 import { getUsers } from 'services/api';
+import { Section } from 'components/Section/Section';
+import { Container } from 'components/Container/Container';
 import { Button } from 'components/Button/Button';
 import { SectionTitle } from 'components/SectionTitle/SectionTitle';
 import { UsersList } from 'components/UsersList/UsersList';
 import { Spinner } from 'components/Spinner/Spinner';
 import { Error } from 'components/Error/Error';
+import './GetSection.scss';
 
 export const GetSection = ({
   users,
@@ -13,7 +16,6 @@ export const GetSection = ({
   isLoading,
   setIsLoading,
 }) => {
-    
   const loadMore = async () => {
     setIsLoading(true);
     const indexQuery = nextUrl.indexOf('?');
@@ -39,20 +41,28 @@ export const GetSection = ({
   };
 
   return (
-    <section>
-      <SectionTitle>Working with GET request</SectionTitle>
-      {users ? (
-        <UsersList users={users} />
-      ) : isLoading ? (
-        <Spinner />
-      ) : (
-        <Error errorText={'There are no users for display'} />
-      )}
-      {nextUrl && !isLoading && (
-        <Button type="button" onClick={loadMore}>
-          Show More
-        </Button>
-      )}
-    </section>
+    <Section id="getSection">
+      <Container>
+        <div className="getsection__wrapper">
+          <SectionTitle>Working with GET request</SectionTitle>
+          {users ? (
+            <UsersList users={users} />
+          ) : isLoading ? (
+            <Spinner />
+          ) : (
+            <Error errorText={'There are no users for display'} />
+          )}
+          {nextUrl && !isLoading && (
+            <Button
+              type="button"
+              onClick={loadMore}
+              getSectionButton="getsection__button"
+            >
+              Show More
+            </Button>
+          )}
+        </div>
+      </Container>
+    </Section>
   );
 };

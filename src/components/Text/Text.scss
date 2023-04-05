@@ -1,0 +1,9 @@
+@import 'styles/shared.scss';
+
+.text {
+  color: var(--white-text-color);
+  text-align: center;
+  @include tablet {
+    width: 380px;
+  }
+}

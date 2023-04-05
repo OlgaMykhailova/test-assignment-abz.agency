@@ -1,12 +1,22 @@
+import './UserCard.scss';
+
 export const UserCard = ({ user }) => {
-  const {photo, name, position, email, phone} = user;
+  const { photo, name, position, email, phone } = user;
   return (
-    <li>
-      <img src={photo} alt="avatar" />
-      <p>{name}</p>
-      <p>{position}</p>
-      <p>{email}</p>
-      <p>{phone}</p>
+    <li className="usercard">
+      <img
+        src={photo}
+        alt="avatar"
+        width="70"
+        height="70"
+        className="usercard__image"
+      />
+      <p className="usercard__name">{name}</p>
+      <div className='usercard__description'>
+        <p>{position}</p>
+        <p>{email}</p>
+        <p>{phone}</p>
+      </div>
     </li>
   );
 };

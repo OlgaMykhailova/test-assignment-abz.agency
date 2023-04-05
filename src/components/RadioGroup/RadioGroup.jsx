@@ -4,6 +4,7 @@ import { getPositions } from 'services/api';
 import { RadioItem } from 'components/RadioItem/RadioItem';
 import { Spinner } from 'components/Spinner/Spinner';
 import { Error } from 'components/Error/Error';
+import './RadioGroup.scss';
 
 export const RadioGroup = ({ name }) => {
   const [positions, setPositions] = useState(null);
@@ -27,8 +28,8 @@ export const RadioGroup = ({ name }) => {
   }, []);
 
   return (
-    <div role="group">
-      Select your position
+    <div role="group" className='radiogroup'>
+      <p className='radiogroup__title'>Select your position</p>
       {isLoading ? (
         <Spinner />
       ) : positions ? (

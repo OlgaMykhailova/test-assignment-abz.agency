@@ -1,0 +1,29 @@
+@import 'styles/shared.scss';
+
+.textinput {
+  width: 328px;
+  height: 54px;
+  padding: 14px 16px;
+  background-color: var(--main-background-color);
+  border: 1px solid var(--border-color);
+  border-radius: 4px;
+  outline: none;
+  &::placeholder {
+    color: var(--secondary-text-color);
+    font-size: var(--main-font-size);
+    line-height: var(--main-lineheight);
+  }
+}
+.textinput__label {
+  position: relative;
+}
+.textinput__field-error {
+  border: 2px solid var(--error-color);
+}
+.textinput__error {
+  position: absolute;
+  top: 54px;
+  left: 14px;
+  color: var(--error-color);
+  font-size: 12px;
+}

@@ -1,6 +1,6 @@
 import * as yup from 'yup';
 
-const FILE_SIZE = 5000000;
+const FILE_SIZE = 5;
 const SUPPORTED_FORMATS = ['image/jpeg', 'image/jpg'];
 
 const nameRegexp = /^[^\s].+(?!.*[ЫыЭэЪъ])([a-zA-Zа-яА-ЯІіЇїЄє\s']+)[^\s]$/;

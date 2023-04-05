@@ -1,0 +1,23 @@
+@import 'styles/shared.scss';
+
+.radioitem__label {
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+}
+
+.radioitem__input {
+  cursor: pointer;
+  appearance: none;
+  -webkit-appearance: none;
+  width: 20px;
+  height: 20px;
+  margin-right: 12px;
+  border-radius: 50%;
+  box-shadow: 0 0 0 1px var(--border-color);
+  &:checked {
+    box-shadow: 0 0 0 1px var(--secondary-color);
+    background-color: var(--secondary-color);
+    border: 5px solid var(--main-background-color);
+  }
+}

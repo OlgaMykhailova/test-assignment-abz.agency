@@ -1,0 +1,26 @@
+@import 'styles/shared.scss';
+
+.usercard {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  width: 328px;
+  height: 254px;
+  padding: 20px;
+  border-radius: 10px;
+  background-color: var(--secondary-background);
+}
+
+.usercard__image {
+    border-radius: 50%;
+}
+
+.usercard__name {
+    margin: 20px 0;
+}
+
+.usercard__description {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}

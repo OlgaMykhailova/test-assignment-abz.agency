@@ -1,0 +1,23 @@
+@import 'styles/shared.scss';
+
+.hero__wrapper {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  width: 360px;
+  height: 500px;
+  margin: 0 auto;
+  padding-top: 40px;
+  padding-bottom: 71px;
+  background-image: var(--gradient), url(../../media/background-mobile-1x.jpg);
+  background-repeat: no-repeat;
+}
+.hero__maintitle {
+  width: 328px;
+}
+.hero__text {
+  width: 328px;
+  margin-top: 21px;
+  margin-bottom: 36px;
+}

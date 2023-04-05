@@ -1,0 +1,26 @@
+@import 'styles/shared.scss';
+
+.button {
+  cursor: pointer;
+  width: 100px;
+  height: 34px;
+  padding: 4px 0;
+  color: var(--primary-text-color);
+  background-color: var(--primary-color);
+  border: none;
+  outline: none;
+  border-radius: 80px;
+  font-family: var(--font);
+  font-size: var(--main-font-size);
+  line-height: var(--main-lineheight);
+  &:hover,
+  &:focus-visible,
+  &:active {
+    background-color: var(--button-hovered);
+  }
+  &:disabled {
+    cursor: default;
+    color: var(--white-disabled-color);
+    background-color: var(--button-disabled);
+  }
+}

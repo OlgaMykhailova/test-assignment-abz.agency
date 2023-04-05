@@ -1,0 +1,15 @@
+@import 'styles/shared.scss';
+
+.form__wrapper {
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.form__button {
+  margin-top: 50px;
+}
+.form__textinput {
+  margin-bottom: 50px;
+}

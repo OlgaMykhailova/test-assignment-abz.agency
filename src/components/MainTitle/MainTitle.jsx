@@ -1,3 +1,5 @@
-export const MainTitle = ({children}) => {
-    return (<h1>{children}</h1>)
-}
+import './MainTitle.scss';
+
+export const MainTitle = ({ children, heroMainTitle='' }) => {
+  return <h1 className={`mainTitle ${heroMainTitle}`}>{children}</h1>;
+};
