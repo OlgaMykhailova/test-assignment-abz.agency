@@ -1,0 +1,15 @@
+@import 'styles/shared.scss';
+
+.tooltip {
+    display: none;
+    position: absolute;
+    top: 100%;
+    right: 0;
+    max-width: 308px;
+    padding: 2px 8px;
+    color: var(--white-text-color);
+    background-color: var(--primary-text-color);
+    opacity: 0;
+    transition: opacity 0.5s ease;
+    word-break: break-all;
+  }

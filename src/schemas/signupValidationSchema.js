@@ -1,6 +1,7 @@
 import * as yup from 'yup';
 
-const FILE_SIZE = 5;
+const FILE_SIZE = 5000000;
+const FILE_DIMENSIONS = { width: 70, height: 70 };
 const SUPPORTED_FORMATS = ['image/jpeg', 'image/jpg'];
 
 const nameRegexp = /^[^\s].+(?!.*[ЫыЭэЪъ])([a-zA-Zа-яА-ЯІіЇїЄє\s']+)[^\s]$/;
@@ -35,6 +36,13 @@ export const signupSchema = yup.object().shape({
     )
     .test('fileType', 'Supported only jpeg and jpg formats', value =>
       SUPPORTED_FORMATS.includes(value.type)
+    )
+    .test(
+      'fileDimensions',
+      'File dimensions must be more than 70x70px',
+      value =>
+        value.width >= FILE_DIMENSIONS.width &&
+        value.height >= FILE_DIMENSIONS.height
     )
     .required('Photo is required'),
 });

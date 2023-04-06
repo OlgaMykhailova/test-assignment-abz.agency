@@ -28,14 +28,14 @@ export const SignupForm = ({ setUsers, setNextUrl, setIsLoading }) => {
     };
 
     console.log(newUser);
-    try {
-      const response = await addUser(newUser);
-      console.log(response);
-      resetForm();
-      await loadUsers(setIsLoading, setUsers, setNextUrl, getUsers);
-    } catch (error) {
-      console.log(error);
-    }
+    // try {
+    //   const response = await addUser(newUser);
+    //   console.log(response);
+    //   resetForm();
+    //   await loadUsers(setIsLoading, setUsers, setNextUrl, getUsers);
+    // } catch (error) {
+    //   console.log(error);
+    // }
   };
   return (
     <Formik
@@ -71,10 +71,23 @@ export const SignupForm = ({ setUsers, setNextUrl, setIsLoading }) => {
             name="photo"
             accept="image/jpeg, image/jpg"
             onChange={e => {
-              console.log(formik);
-              formik.setFieldValue('photo', e.target.files[0]);
-              formik.setFieldValue('imageurl', e.target.files[0].name);
-              formik.setFieldTouched('photo')
+              if (e.target.files?.length > 0) {
+                const reader = new FileReader();
+                reader.readAsDataURL(e.target.files[0]);
+                reader.onloadend = event => {
+                  const image = new Image();
+                  image.src = event.target.result;
+                  image.onload = function () {
+                    const file = Object.assign(e.target.files[0], {
+                      width: image.width,
+                      height: image.height,
+                    });
+                    formik.setFieldValue('photo', file);
+                    formik.setFieldValue('imageurl', file.name);
+                    formik.setFieldTouched('photo');
+                  };
+                };
+              }
             }}
             errors={formik.errors}
             touched={formik.touched}
@@ -82,7 +95,7 @@ export const SignupForm = ({ setUsers, setNextUrl, setIsLoading }) => {
           <Button
             type="submit"
             formButton="form__button"
-            disabled={!formik.isValid}
+            disabled={!(formik.dirty && formik.isValid)}
           >
             Sign up
           </Button>

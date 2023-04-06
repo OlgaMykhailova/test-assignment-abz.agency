@@ -1,3 +1,4 @@
+import { Tooltip } from 'components/Tooltip/Tooltip';
 import './UserCard.scss';
 
 export const UserCard = ({ user }) => {
@@ -11,10 +12,16 @@ export const UserCard = ({ user }) => {
         height="70"
         className="usercard__image"
       />
-      <p className="usercard__name">{name}</p>
-      <div className='usercard__description'>
+      <div className="usercard__wrapper">
+        <p className="usercard__name">{name}</p>
+        <Tooltip usercardTooltip="usercard__tooltip">{name}</Tooltip>
+      </div>
+      <div className="usercard__description">
         <p>{position}</p>
-        <p>{email}</p>
+        <div className="usercard__wrapper">
+          <p className="usercard__email">{email}</p>
+          <Tooltip>{email}</Tooltip>
+        </div>
         <p>{phone}</p>
       </div>
     </li>

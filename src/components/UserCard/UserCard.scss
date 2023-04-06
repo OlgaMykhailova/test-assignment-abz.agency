@@ -12,15 +12,42 @@
 }
 
 .usercard__image {
-    border-radius: 50%;
+  border-radius: 50%;
+}
+
+.usercard__wrapper {
+  cursor: pointer;
+  width: 100%;
+  position: relative;
+  &:hover .tooltip {
+    display: block;
+    opacity: 1;
+  }
 }
 
 .usercard__name {
-    margin: 20px 0;
+  width: 100%;
+  margin: 20px 0;
+  text-align: center;
+  overflow: hidden;
+  white-space: nowrap;
+  text-overflow: ellipsis;
 }
 
 .usercard__description {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  width: 100%;
+  text-align: center;
+}
+
+.usercard__email {
+  overflow: hidden;
+  white-space: nowrap;
+  text-overflow: ellipsis;
+}
+
+.usercard__tooltip {
+  top: calc(100% - 20px);
 }
