@@ -1,8 +1,18 @@
 @import 'styles/shared.scss';
 
 .userlist {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    gap: 20px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 20px;
+  width: 100%;
+  @include tablet {
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 16px;
+  }
+  @include desktop {
+    gap: 29px;
+  }
 }

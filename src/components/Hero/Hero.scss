@@ -12,12 +12,37 @@
   padding-bottom: 71px;
   background-image: var(--gradient), url(../../media/background-mobile-1x.jpg);
   background-repeat: no-repeat;
+  @include tablet {
+    width: 768px;
+    padding-top: 89px;
+    padding-bottom: 88px;
+    background-image: var(--gradient), url(../../media/background-tablet-1x.jpg);
+  }
+  @include desktop {
+    width: 1024px;
+    padding-top: 164px;
+    padding-bottom: 163px;
+    background-image: var(--gradient), url(../../media/background-desktop-1x.jpg);
+  }
+  @include desktop-large {
+    width: 1170px;
+    height: 650px;
+    padding-top: 164px;
+    padding-bottom: 163px;
+    background-image: var(--gradient), url(../../media/background-desktop-large-1x.jpg);
+  }
 }
 .hero__maintitle {
   width: 328px;
+  @include tablet {
+    width: 380px;
+  }
 }
 .hero__text {
   width: 328px;
   margin-top: 21px;
-  margin-bottom: 36px;
+  margin-bottom: 32px;
+  @include tablet {
+    width: 380px;
+  }
 }
