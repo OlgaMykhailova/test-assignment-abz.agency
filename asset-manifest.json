@@ -1,7 +1,7 @@
 {
   "files": {
-    "main.css": "/test-assignment-abz.agency/static/css/main.a0858540.css",
-    "main.js": "/test-assignment-abz.agency/static/js/main.a5f9e3a3.js",
+    "main.css": "/test-assignment-abz.agency/static/css/main.0fe16665.css",
+    "main.js": "/test-assignment-abz.agency/static/js/main.63a8a795.js",
     "static/media/background-desktop-large-2x.jpg": "/test-assignment-abz.agency/static/media/background-desktop-large-2x.d09c748e7676d7d9f527.jpg",
     "static/media/background-desktop-2x.jpg": "/test-assignment-abz.agency/static/media/background-desktop-2x.946324aefd5701e79a1b.jpg",
     "static/media/background-tablet-2x.jpg": "/test-assignment-abz.agency/static/media/background-tablet-2x.849984c57139822db48f.jpg",
@@ -15,11 +15,11 @@
     "static/media/logo-image.svg": "/test-assignment-abz.agency/static/media/logo-image.d1de4d295f02a160968994d21d5abcf8.svg",
     "static/media/logo.svg": "/test-assignment-abz.agency/static/media/logo.c989a43d6ae68c5eb687f35e38ad6be2.svg",
     "index.html": "/test-assignment-abz.agency/index.html",
-    "main.a0858540.css.map": "/test-assignment-abz.agency/static/css/main.a0858540.css.map",
-    "main.a5f9e3a3.js.map": "/test-assignment-abz.agency/static/js/main.a5f9e3a3.js.map"
+    "main.0fe16665.css.map": "/test-assignment-abz.agency/static/css/main.0fe16665.css.map",
+    "main.63a8a795.js.map": "/test-assignment-abz.agency/static/js/main.63a8a795.js.map"
   },
   "entrypoints": [
-    "static/css/main.a0858540.css",
-    "static/js/main.a5f9e3a3.js"
+    "static/css/main.0fe16665.css",
+    "static/js/main.63a8a795.js"
   ]
 }
