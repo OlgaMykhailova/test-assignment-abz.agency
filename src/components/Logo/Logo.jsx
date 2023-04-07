@@ -5,7 +5,7 @@ import './Logo.scss';
 export const Logo = () => {
   return (
     <div className="logo__container">
-      <LogoImage className="logo__image"/>
+      <LogoImage className="logo__image" />
       <LogoText />
     </div>
   );

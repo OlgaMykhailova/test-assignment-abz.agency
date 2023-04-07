@@ -1,5 +1,4 @@
-
-import { Formik, Form, useFormikContext } from 'formik';
+import { Formik, Form } from 'formik';
 import { toast } from 'react-toastify';
 import MaskedInput from 'react-text-mask';
 import { addUser, getUsers } from 'services/api';
@@ -42,8 +41,6 @@ export const SignupForm = ({ setUsers, setNextUrl, setIsLoading }) => {
     /\d/,
     /\d/,
   ];
-
-
 
   const handleSubmit = async (values, { resetForm }) => {
     const newUser = {

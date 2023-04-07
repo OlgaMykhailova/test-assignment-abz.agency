@@ -5,7 +5,6 @@ export const RadioItem = ({ position, name }) => {
   return (
     <>
       <label className="radioitem__label">
-        
         <Field
           type="radio"
           name={name}

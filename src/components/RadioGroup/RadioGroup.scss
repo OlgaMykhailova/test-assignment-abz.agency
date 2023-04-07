@@ -1,13 +1,12 @@
 @import 'styles/shared.scss';
 
 .radiogroup {
-    display: flex;
-    flex-direction: column;
-    gap: 7px;
-    width: 100%;
-    margin: 43px 0 47px 0;
-    
+  display: flex;
+  flex-direction: column;
+  gap: 7px;
+  width: 100%;
+  margin: 43px 0 47px 0;
 }
 .radiogroup__title {
-    margin-bottom: 11px;
+  margin-bottom: 11px;
 }

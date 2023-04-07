@@ -6,9 +6,9 @@ import './PostSection.scss';
 
 export const PostSection = ({ setUsers, setNextUrl, setIsLoading }) => {
   return (
-    <Section id="postSection" postSection='postsection__section'>
+    <Section id="postSection" postSection="postsection__section">
       <Container>
-        <div className='postsection__wrapper'>
+        <div className="postsection__wrapper">
           <SectionTitle>Working with POST request</SectionTitle>
           <SignupForm
             setUsers={setUsers}

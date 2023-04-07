@@ -5,7 +5,11 @@ import './Navigation.scss';
 export const Navigation = () => {
   return (
     <nav className="navigation">
-      <Button type="button" navigationButton="navigation__button" onClick={() => scrollTo('getSection')}>
+      <Button
+        type="button"
+        navigationButton="navigation__button"
+        onClick={() => scrollTo('getSection')}
+      >
         Users
       </Button>
       <Button type="button" onClick={() => scrollTo('postSection')}>

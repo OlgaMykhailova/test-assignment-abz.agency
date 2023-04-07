@@ -5,7 +5,8 @@ const FILE_DIMENSIONS = { width: 70, height: 70 };
 const SUPPORTED_FORMATS = ['image/jpeg', 'image/jpg'];
 
 const nameRegexp = /^[^\s].+(?!.*[ЫыЭэЪъ])([a-zA-Zа-яА-ЯІіЇїЄє\s']+)[^\s]$/;
-const emailRegexp = /[a-z0-9!#$%&'*+/=?^_`{|}~-]+(?:\.[a-z0-9!#$%&'*+/=?^_`{|}~-]+)*@(?:[a-z0-9](?:[a-z0-9-]*[a-z0-9])?\.)+[a-z0-9](?:[a-z0-9-]*[a-z0-9])?$/;
+const emailRegexp =
+  /[a-z0-9!#$%&'*+/=?^_`{|}~-]+(?:\.[a-z0-9!#$%&'*+/=?^_`{|}~-]+)*@(?:[a-z0-9](?:[a-z0-9-]*[a-z0-9])?\.)+[a-z0-9](?:[a-z0-9-]*[a-z0-9])?$/;
 const phoneRegexp =
   /^(\+\d{1,2}\s)?\(?\d{3}\)?[\s.-]\d{3}[\s.-]\d{2}[.-]\d{2}$/;
 
