@@ -23,9 +23,9 @@
   background-repeat: no-repeat;
   background-position: 50% 75%;
   background-image: url(../../media/success-signup-1x.png);
-  @include device-pixel-ratio-2 {
-    background-image: url(../../media/success-signup-2x.png);
-  }
+//   @include device-pixel-ratio-2 {
+//     background-image: url(../../media/success-signup-2x.png);
+//   }
   @include tablet {
     width: 500px;
   }
