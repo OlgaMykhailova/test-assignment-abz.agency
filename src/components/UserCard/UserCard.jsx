@@ -1,4 +1,5 @@
 import { useState, useEffect, useRef } from 'react';
+import { Avatar } from 'components/Avatar/Avatar';
 import { Tooltip } from 'components/Tooltip/Tooltip';
 import './UserCard.scss';
 
@@ -20,14 +21,7 @@ export const UserCard = ({ user }) => {
 
   return (
     <li className="usercard">
-      <img
-        src={photo}
-        alt="avatar"
-        width="70"
-        height="70"
-        className="usercard__image"
-        loading="lazy"
-      />
+      <Avatar photo={photo} />
       <div className="usercard__wrapper">
         <p ref={refName} className="usercard__name">
           {name}
