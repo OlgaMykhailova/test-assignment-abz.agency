@@ -12,7 +12,7 @@ Header has a navigation menu that allows you to navigate to the required section
 
 In the working with GET request section you can see list of users (six users by default). You can additionally download user cards by clicking Load more button. If the end of the list is reached, the Load more button will not be displayed. If the name or email is too long, the text in the card will be truncated. The full text can be seen in the tooltip that appears when hovering over the hidden text. Implemented a check where the tooltip is displayed only when part of the text has been hidden. 
 
-In the working with POST request section you can see Sign up form. In the form is implemented validation of all fields, they are all required and meet the requirements specified in the technical task. The file upload field is checked for file type, file size, and dimensions of the image. The Sign up button is disabled until all fields are validated. After successfully sending the form, the user will receive a message about successful registration
+In the working with POST request section you can see Sign up form. In the form is implemented validation of all fields, they are all required and meet the requirements specified in the technical task. An input mask is made for the phone number input field, so filling this field is very convenient for the user and does not require an additional prompt from the bottom of the field. The file upload field is checked for file type, file size, and dimensions of the image. The Sign up button is disabled until all fields are validated. After successfully sending the form, the user will receive a message about successful registration
 
 Images are optimized for retina screens.
 
