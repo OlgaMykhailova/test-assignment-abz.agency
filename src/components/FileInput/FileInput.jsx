@@ -1,17 +1,27 @@
-import { Field } from 'formik';
+import { useEffect } from 'react';
+import { Field, ErrorMessage, useFormikContext } from 'formik';
 import { isError } from 'services/isError';
 import './FileInput.scss';
+import { CustomInput } from './CustomInput';
 
-export const FileInput = ({ name, accept, onChange, errors, touched }) => {
+export const FileInput = ({ name, accept, formik, errors, touched }) => {
+  const { setFieldValue, values } = useFormikContext();
+
+  useEffect(() => {
+    if (values.photo !== '') {
+      setFieldValue('imageurl', values.photo?.name);
+    }
+  }, [setFieldValue, values.photo]);
+
   return (
     <label className="fileinput__label">
-      <input
+      <Field
+        component={CustomInput}
         name={name}
-        type="file"
         accept={accept}
-        onChange={onChange}
-        className="fileinput"
+        formik={formik}
       />
+
       <Field
         name="imageurl"
         type="text"
@@ -19,7 +29,6 @@ export const FileInput = ({ name, accept, onChange, errors, touched }) => {
         className={`fileinput__field ${
           isError(errors, touched, name) && 'fileinput__field-error'
         }`}
-        disabled
       />
       <div
         className={`fileinput__button ${
@@ -28,15 +37,11 @@ export const FileInput = ({ name, accept, onChange, errors, touched }) => {
       >
         Upload
       </div>
-      <p
+      <ErrorMessage
         name={name}
         component="p"
-        className={`fileinput__error ${
-          isError(errors, touched, name) && 'fileinput__error-visible'
-        }`}
-      >
-        {errors.photo}
-      </p>
+        className="fileinput__error"
+      ></ErrorMessage>
     </label>
   );
 };

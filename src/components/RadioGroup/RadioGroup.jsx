@@ -1,6 +1,7 @@
 import { useState, useEffect } from 'react';
 import { ErrorMessage } from 'formik';
 import { getPositions } from 'services/api';
+import { loadPositions } from 'services/loadPositions';
 import { RadioItem } from 'components/RadioItem/RadioItem';
 import { Spinner } from 'components/Spinner/Spinner';
 import { Error } from 'components/Error/Error';
@@ -11,25 +12,12 @@ export const RadioGroup = ({ name }) => {
   const [isLoading, setIsLoading] = useState(false);
 
   useEffect(() => {
-    const loadPositions = async () => {
-      setIsLoading(true);
-      try {
-        const responseData = await getPositions();
-        if (!responseData) {
-          throw new Error(
-            'Sorry, there are no positions for display. Please try again later.'
-          );
-        }
-        setPositions(responseData.positions);
-        setIsLoading(false);
-      } catch (error) {}
-    };
-    loadPositions();
+    loadPositions(setIsLoading, getPositions, setPositions);
   }, []);
 
   return (
-    <div role="group" className='radiogroup'>
-      <p className='radiogroup__title'>Select your position</p>
+    <div role="group" className="radiogroup">
+      <p className="radiogroup__title">Select your position</p>
       {isLoading ? (
         <Spinner />
       ) : positions ? (

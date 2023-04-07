@@ -1,4 +1,5 @@
 export const isError = (errors, touched, fieldName) => {
+  
     if (
       fieldName &&
       touched &&
@@ -6,6 +7,7 @@ export const isError = (errors, touched, fieldName) => {
       errors &&
       errors[fieldName]
     ) {
+      
       return true;
     }
   }

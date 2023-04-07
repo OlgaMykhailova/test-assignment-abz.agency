@@ -6,12 +6,16 @@ export const TextInput = ({
   name,
   placeholder,
   formTextInput = '',
+  maskedInput,
+  mask,
   errors,
   touched,
 }) => {
   return (
     <label className={`${formTextInput} textinput__label`}>
       <Field
+        as={maskedInput}
+        mask={mask}
         autoComplete="off"
         type="text"
         name={name}

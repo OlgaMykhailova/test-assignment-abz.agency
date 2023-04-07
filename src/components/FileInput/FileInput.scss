@@ -1,8 +1,6 @@
 @import 'styles/shared.scss';
 
-.fileinput {
-  display: none;
-}
+
 .fileinput__label {
   position: relative;
   cursor: pointer;
@@ -35,16 +33,11 @@
 }
 
 .fileinput__error {
-  display: none;
   position: absolute;
   top: 54px;
   left: 14px;
   color: var(--error-color);
   font-size: 12px;
-}
-
-.fileinput__error-visible {
-   display: block;
 }
 
 .fileinput__field-error {

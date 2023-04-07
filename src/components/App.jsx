@@ -5,6 +5,7 @@ import { GetSection } from './GetSection/GetSection';
 import { Header } from './Header/Header';
 import { Hero } from './Hero/Hero';
 import { PostSection } from './PostSection/PostSection';
+import { Toast } from './Toast/Toast';
 
 export const App = () => {
   const [users, setUsers] = useState(null);
@@ -32,6 +33,7 @@ export const App = () => {
         setNextUrl={setNextUrl}
         setIsLoading={setIsLoading}
       />
+      <Toast />
     </>
   );
 };

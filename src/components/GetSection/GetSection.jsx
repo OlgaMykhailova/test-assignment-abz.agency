@@ -45,12 +45,9 @@ export const GetSection = ({
       <Container>
         <div className="getsection__wrapper">
           <SectionTitle>Working with GET request</SectionTitle>
-          {users ? (
-            <UsersList users={users} />
-          ) : isLoading ? (
-            <Spinner />
-          ) : (
-            <Error errorText={'There are no users for display'} />
+          {users && <UsersList users={users} />}
+          {!users && !isLoading && (
+            <Error>There are no users for display</Error>
           )}
           {nextUrl && !isLoading && (
             <Button
@@ -61,6 +58,7 @@ export const GetSection = ({
               Show More
             </Button>
           )}
+          {isLoading && <Spinner />}
         </div>
       </Container>
     </Section>

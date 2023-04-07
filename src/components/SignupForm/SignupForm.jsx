@@ -1,4 +1,7 @@
-import { Formik, Form } from 'formik';
+
+import { Formik, Form, useFormikContext } from 'formik';
+import { toast } from 'react-toastify';
+import MaskedInput from 'react-text-mask';
 import { addUser, getUsers } from 'services/api';
 import { loadUsers } from 'services/loadUsers';
 import { Button } from 'components/Button/Button';
@@ -18,24 +21,50 @@ export const SignupForm = ({ setUsers, setNextUrl, setIsLoading }) => {
     imageurl: '',
   };
 
+  const phoneNumberMask = [
+    '+',
+    '3',
+    '8',
+    ' ',
+    '(',
+    '0',
+    /[0-9]/,
+    /\d/,
+    ')',
+    ' ',
+    /\d/,
+    /\d/,
+    /\d/,
+    '-',
+    /\d/,
+    /\d/,
+    '-',
+    /\d/,
+    /\d/,
+  ];
+
+
+
   const handleSubmit = async (values, { resetForm }) => {
     const newUser = {
       name: values.name,
       email: values.email,
-      phone: values.phone,
+      phone: values.phone.replaceAll(/[-()\s]/g, ''),
       position_id: Number(values.position),
       photo: values.photo,
     };
 
-    console.log(newUser);
-    // try {
-    //   const response = await addUser(newUser);
-    //   console.log(response);
-    //   resetForm();
-    //   await loadUsers(setIsLoading, setUsers, setNextUrl, getUsers);
-    // } catch (error) {
-    //   console.log(error);
-    // }
+    toast.success('User successfully registered', {
+      icon: false,
+    });
+    try {
+      const response = await addUser(newUser);
+      console.log(response);
+      resetForm();
+      await loadUsers(setIsLoading, setUsers, setNextUrl, getUsers);
+    } catch (error) {
+      console.log(error);
+    }
   };
   return (
     <Formik
@@ -60,35 +89,18 @@ export const SignupForm = ({ setUsers, setNextUrl, setIsLoading }) => {
             touched={formik.touched}
           />
           <TextInput
+            maskedInput={MaskedInput}
+            mask={phoneNumberMask}
             name="phone"
             placeholder="Phone"
             errors={formik.errors}
             touched={formik.touched}
           />
-
           <RadioGroup name="position" />
           <FileInput
             name="photo"
             accept="image/jpeg, image/jpg"
-            onChange={e => {
-              if (e.target.files?.length > 0) {
-                const reader = new FileReader();
-                reader.readAsDataURL(e.target.files[0]);
-                reader.onloadend = event => {
-                  const image = new Image();
-                  image.src = event.target.result;
-                  image.onload = function () {
-                    const file = Object.assign(e.target.files[0], {
-                      width: image.width,
-                      height: image.height,
-                    });
-                    formik.setFieldValue('photo', file);
-                    formik.setFieldValue('imageurl', file.name);
-                    formik.setFieldTouched('photo');
-                  };
-                };
-              }
-            }}
+            formik={formik}
             errors={formik.errors}
             touched={formik.touched}
           />

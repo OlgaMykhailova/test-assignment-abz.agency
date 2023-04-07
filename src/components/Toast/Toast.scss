@@ -1,0 +1,48 @@
+@import 'styles/shared.scss';
+
+
+.Toastify__toast-container {
+  transform: translateX(-50%);
+  left: 50%;
+  width: auto;
+  width: 308px;
+  height: 500px;
+  @include tablet {
+    width: 500px;
+  }
+}
+
+.Toastify__toast--success {
+  width: 308px;
+  height: 500px;
+  border-radius: 12px;
+  color: var(--primary-text-color);
+  text-align: center;
+  font-size: var(--heading-font-size);
+  font-weight: 400;
+  line-height: var(--heading-lineheight);
+  background-repeat: no-repeat;
+  background-position: 50% 75%;
+  background-image: url(../../media/success-signup-1x.png);
+  @include device-pixel-ratio-2 {
+    background-image: url(../../media/success-signup-2x.png);}
+  @include tablet {
+    width: 500px;
+  }
+}
+.Toastify__toast-body {
+  margin-top: 20px;
+  align-items: flex-start;
+  @include tablet {
+    margin-top: 30px;
+  }
+}
+.Toastify__toast--error {
+  min-height: 150px;
+  border-radius: 12px;
+  color: var(--error-color);
+}
+.Toastify__close-button {
+  margin-top: 10px;
+  margin-right: 12px;
+}

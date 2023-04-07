@@ -1,3 +1,5 @@
-export const Error = ({ errorText }) => {
-  return <p>{errorText}</p>;
+import './Error.scss';
+
+export const Error = ({ children }) => {
+  return <p className='error'>{children}</p>;
 };

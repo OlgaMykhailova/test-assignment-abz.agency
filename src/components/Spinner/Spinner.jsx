@@ -1,3 +1,5 @@
+import './Spinner.scss';
+
 export const Spinner = () => {
-    return (<p>Spinner</p>)
+    return (<div className='spinner'></div>)
 }
