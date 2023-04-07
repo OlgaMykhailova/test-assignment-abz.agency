@@ -26,6 +26,7 @@ export const UserCard = ({ user }) => {
         width="70"
         height="70"
         className="usercard__image"
+        loading="lazy"
       />
       <div className="usercard__wrapper">
         <p ref={refName} className="usercard__name">
@@ -46,7 +47,10 @@ export const UserCard = ({ user }) => {
         <p>
           {phone
             .replace(/\D+/g, '')
-            .replace(/(\d{2})(\d{3})(\d{3})(\d{2})(\d{2})/, '+$1 ($2) $3 $4 $5')}
+            .replace(
+              /(\d{2})(\d{3})(\d{3})(\d{2})(\d{2})/,
+              '+$1 ($2) $3 $4 $5'
+            )}
         </p>
       </div>
     </li>
