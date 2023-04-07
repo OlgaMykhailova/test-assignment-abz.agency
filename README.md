@@ -29,6 +29,16 @@ Working with POST request section
 
 ![Working with POST request section](./assets/PostSection.jpg)
 
+PageSpeed Insights:
+
+Mobile
+
+![Working with POST request section](./assets/PageSpeed-mobile.jpg)
+
+Desktop
+
+![Working with POST request section](./assets/PageSpeed-desktop.jpg)
+
 ## Deploy
 
 [Link](https://olgamykhailova.github.io/test-assignment-abz.agency/)
