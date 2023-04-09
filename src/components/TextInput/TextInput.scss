@@ -9,19 +9,36 @@
   border-radius: 4px;
   outline: none;
   &::placeholder {
-    color: var(--secondary-text-color);
-    font-size: var(--main-font-size);
-    line-height: var(--main-lineheight);
+    opacity: 0;
+  }
+  &:focus + .textinput__label,
+  &:not(:placeholder-shown) + .textinput__label {
+    transform: translateY(-150%);
   }
   @include tablet {
     width: 380px;
   }
 }
-.textinput__label {
+.textinput__wrapper {
   position: relative;
+}
+.textinput__label {
+  position: absolute;
+  top: 50%;
+  left: 16px;
+  transform: translateY(-50%);
+  padding: 0 4px;
+  color: var(--secondary-text-color);
+  font-size: var(--main-font-size);
+  line-height: var(--main-lineheight);
+  transition: transform var(--transition);
+  background-color: var(--main-background-color);
 }
 .textinput__field-error {
   border: 2px solid var(--error-color);
+}
+.textinput__label-error {
+  color: var(--error-color);
 }
 .textinput__error {
   position: absolute;

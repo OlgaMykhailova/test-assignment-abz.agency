@@ -10,6 +10,6 @@
   color: var(--white-text-color);
   background-color: var(--primary-text-color);
   opacity: 0;
-  transition: opacity 0.5s ease;
+  transition: opacity var(--transition);
   word-break: break-all;
 }

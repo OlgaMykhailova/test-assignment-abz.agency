@@ -73,6 +73,7 @@ export const SignupForm = ({ setUsers, setNextUrl, setIsLoading }) => {
         <Form className="form__wrapper">
           <TextInput
             name="name"
+            label="Your name"
             placeholder="Your name"
             formTextInput="form__textinput"
             errors={formik.errors}
@@ -80,6 +81,7 @@ export const SignupForm = ({ setUsers, setNextUrl, setIsLoading }) => {
           />
           <TextInput
             name="email"
+            label="Email"
             placeholder="Email"
             formTextInput="form__textinput"
             errors={formik.errors}
@@ -89,6 +91,7 @@ export const SignupForm = ({ setUsers, setNextUrl, setIsLoading }) => {
             maskedInput={MaskedInput}
             mask={phoneNumberMask}
             name="phone"
+            label="Phone"
             placeholder="Phone"
             errors={formik.errors}
             touched={formik.touched}
