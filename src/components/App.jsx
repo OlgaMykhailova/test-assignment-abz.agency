@@ -19,20 +19,22 @@ export const App = () => {
   return (
     <>
       <Header />
-      <Hero />
-      <GetSection
-        users={users}
-        setUsers={setUsers}
-        nextUrl={nextUrl}
-        setNextUrl={setNextUrl}
-        isLoading={isLoading}
-        setIsLoading={setIsLoading}
-      />
-      <PostSection
-        setUsers={setUsers}
-        setNextUrl={setNextUrl}
-        setIsLoading={setIsLoading}
-      />
+      <main>
+        <Hero />
+        <GetSection
+          users={users}
+          setUsers={setUsers}
+          nextUrl={nextUrl}
+          setNextUrl={setNextUrl}
+          isLoading={isLoading}
+          setIsLoading={setIsLoading}
+        />
+        <PostSection
+          setUsers={setUsers}
+          setNextUrl={setNextUrl}
+          setIsLoading={setIsLoading}
+        />
+      </main>
       <Toast />
     </>
   );
