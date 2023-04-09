@@ -27,6 +27,7 @@
   }
   @include desktop {
     width: 1024px;
+    height: 650px;
     padding-top: 164px;
     padding-bottom: 163px;
     background-image: var(--gradient),
@@ -38,7 +39,6 @@
   }
   @include desktop-large {
     width: 1170px;
-    height: 650px;
     background-image: var(--gradient),
       url(../../media/background-desktop-large-1x.jpg);
     @include device-pixel-ratio-2 {
