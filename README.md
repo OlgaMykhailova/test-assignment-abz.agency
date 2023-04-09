@@ -49,3 +49,5 @@ Desktop
 npm install
 npm start
 ```
+
+This project was built as a test task for ABZ Agency. The design was provided by ABZ Agency.
