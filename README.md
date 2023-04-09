@@ -29,15 +29,21 @@ Working with POST request section
 
 ![Working with POST request section](./assets/PostSection.jpg)
 
-PageSpeed Insights:
+PageSpeed Insights Mobile:
 
-Mobile
+![PageSpeed Insights Mobile:](./assets/PageSpeed-mobile.jpg)
 
-![Working with POST request section](./assets/PageSpeed-mobile.jpg)
+PageSpeed Insights Desktop:
 
-Desktop
+![PageSpeed Insights Desktop:](./assets/PageSpeed-desktop.jpg)
 
-![Working with POST request section](./assets/PageSpeed-desktop.jpg)
+Lighthouse Mobile:
+
+![Lighthouse Mobile:](./assets/Lighthouse-mobile.jpg)
+
+Lighthouse Desktop:
+
+![Lighthouse Desktop:](./assets/Lighthouse-desktop.jpg)
 
 ## Deploy
 
