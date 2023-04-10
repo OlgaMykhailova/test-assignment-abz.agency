@@ -20,10 +20,14 @@
   }
 }
 
+
 .usercard__wrapper {
-  cursor: pointer;
+  
   width: 100%;
   position: relative;
+  &-pointer {
+    cursor: pointer;
+  }
   &:hover .tooltip {
     display: block;
     opacity: 1;

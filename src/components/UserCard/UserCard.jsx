@@ -3,6 +3,7 @@ import { Avatar } from 'components/Avatar/Avatar';
 import { Tooltip } from 'components/Tooltip/Tooltip';
 import './UserCard.scss';
 
+
 export const UserCard = ({ user }) => {
   const [isNameOverflowHidden, setIsNameOverflowHidden] = useState(false);
   const [isEmailOverflowHidden, setIsEmailOverflowHidden] = useState(false);
@@ -22,7 +23,7 @@ export const UserCard = ({ user }) => {
   return (
     <li className="usercard">
       <Avatar photo={photo} />
-      <div className="usercard__wrapper">
+      <div className={`usercard__wrapper ${isNameOverflowHidden && 'usercard__wrapper-pointer'}`}>
         <p ref={refName} className="usercard__name">
           {name}
         </p>
@@ -32,7 +33,7 @@ export const UserCard = ({ user }) => {
       </div>
       <div className="usercard__description">
         <p>{position}</p>
-        <div className="usercard__wrapper">
+        <div className={`usercard__wrapper ${isEmailOverflowHidden && 'usercard__wrapper-pointer'}`}>
           <p ref={refEmail} className="usercard__email">
             {email}
           </p>
